@@ -17,6 +17,8 @@ header {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  animation-name: shake;
+  animation-duration: 1.5s;
 }
 
 nav ul {
@@ -69,6 +71,20 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+}
+
+@keyframes shake {
+  10% {
+    transform: scaleY(70%);
+  }
+
+  15% {
+    transform: scaleY(120%);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
 }
 
 .product-grid {
