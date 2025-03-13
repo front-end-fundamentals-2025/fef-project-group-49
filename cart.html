@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/shopping-cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><strong>GM</strong></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search products..." />
+        <button onclick="searchProducts()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <div id="cart-container">
+      <p id="empty-cart">There is nothing in the cart.</p>
+      <div class="cart1" id="cart-item" style="display: none">
+        <img id="cart-img" src="" alt="Product Image" width="200" />
+        <h3 id="cart-name"></h3>
+        <p id="cart-price"></p>
+        <button onclick="removeFromCart()">Remove from Cart</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Gaming Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+  </body>
+</html>
