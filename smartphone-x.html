@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GamingMarketPlace</title>
+    <link rel="stylesheet" href="css/detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><strong>GM</strong></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search products..." />
+        <button onclick="searchProducts()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="cart">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+      </div>
+    </header>
+
+    <div class="product-grid" id="product-list">
+      <div class="product" data-name="Smartphone X">
+        <img src="img/product1.jpg" alt="Product 1" />
+        <div class="info">
+          <h3>Smartphone X</h3>
+          <p>Price: $699.99</p>
+          <p>Storage: 128 GB</p>
+          <p>In Warehouse: 100+</p>
+          <p>Available stores: 154</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Your Store. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
