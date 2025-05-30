@@ -19,6 +19,7 @@ header {
   font-weight: bold;
   animation-name: shake;
   animation-duration: 1.5s;
+  translate: -20px 0px;
 }
 
 nav ul {
@@ -31,6 +32,7 @@ nav ul {
 
 nav ul li {
   display: inline;
+  translate: -10px 0px;
 }
 
 nav ul li a {
@@ -71,6 +73,10 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+}
+
+.cart {
+  translate: 15px 0px;
 }
 
 @keyframes shake {
