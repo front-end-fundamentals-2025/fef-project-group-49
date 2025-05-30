@@ -1,4 +1,4 @@
-// Function to add Smartphone X to the cart
+// Function to add phone to the cart
 function addToCart() {
   const product = {
     name: "Smartphone X",
@@ -12,24 +12,47 @@ function addToCart() {
 function loadCart() {
   const cartItem = localStorage.getItem("cartItem");
 
-  if (cartItem) {
+  const emptyCartText = document.getElementById("empty-cart");
+  const cartItemContainer = document.getElementById("cart-item");
+
+  if (cartItem && cartItemContainer && emptyCartText) {
     const product = JSON.parse(cartItem);
-    document.getElementById("empty-cart").style.display = "none";
-    document.getElementById("cart-item").style.display = "block";
+    emptyCartText.style.display = "none";
+    cartItemContainer.style.display = "block";
+
     document.getElementById("cart-img").src = product.image;
     document.getElementById("cart-name").innerText = product.name;
     document.getElementById("cart-price").innerText = product.price;
-  } else {
-    console.log("Cart is empty.");
+  } else if (emptyCartText && cartItemContainer) {
+    emptyCartText.style.display = "block";
+    cartItemContainer.style.display = "none";
   }
 }
 
 // Function to remove item from cart
 function removeFromCart() {
   localStorage.removeItem("cartItem");
-  document.getElementById("cart-item").style.display = "none";
-  document.getElementById("empty-cart").style.display = "block";
+  loadCart();
 }
 
-// Load cart when the page loads
-document.addEventListener("DOMContentLoaded", loadCart);
+function setupEventListeners() {
+  const removeBtn = document.getElementById("remove-btn");
+  if (removeBtn) {
+    removeBtn.addEventListener("click", removeFromCart);
+  }
+
+  const searchBtn = document.getElementById("search-btn");
+  if (searchBtn) {
+    searchBtn.addEventListener("click", searchProducts);
+  }
+}
+
+function searchProducts() {
+  const query = document.getElementById("search").value;
+  console.log(`Searching for: ${query}`);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadCart();
+  setupEventListeners();
+});
