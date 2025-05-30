@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/shopping-cart.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -30,16 +32,17 @@
       </div>
     </header>
 
-    <div id="cart-container">
-      <p id="empty-cart">There is nothing in the cart.</p>
-      <div class="cart1" id="cart-item" style="display: none">
-        <img id="cart-img" src="" alt="Product Image" width="200" />
-        <h3 id="cart-name"></h3>
-        <p id="cart-price"></p>
-        <button onclick="removeFromCart()">Remove from Cart</button>
+    <main>
+      <div id="cart-container">
+        <p id="empty-cart">There is nothing in the cart.</p>
+        <div class="cart1" id="cart-item">
+          <img id="cart-img" src="" alt="Product Image" width="200" />
+          <h3 id="cart-name"></h3>
+          <p id="cart-price"></p>
+          <button onclick="removeFromCart()">Remove from Cart</button>
+        </div>
       </div>
-    </div>
-
+    </main>
     <footer>
       <p>&copy; 2025 Gaming Marketplace.</p>
     </footer>
